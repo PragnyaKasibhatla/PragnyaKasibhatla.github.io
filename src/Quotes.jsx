@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './index.css';
 import { quotes } from './data';
 import { images } from './data';
+import './index.css';
 function Quotes(){
     const [index,setIndex] = new useState(0);
     const [img,setImg] = new useState("../assets/bg/5.jpg");
@@ -30,9 +30,10 @@ function Quotes(){
         document.body.style.backgroundImage = `url('${img}')`;
     }
     useEffect(()=>{
-    
+        document.body.style.backgroundImage = `url('${img}')`;
     });
     return (
+        <>
         <div>
         {/* <button className='button' onClick={()=> alert("HIII")}></button> */}
         <img className='prev' alt="prev" src="../assets/arrows/p.svg" onClick={prev}></img>
@@ -44,6 +45,7 @@ function Quotes(){
 
         {/* <h1>{index}</h1> */}
         </div>
+        </>
         );
 }
 

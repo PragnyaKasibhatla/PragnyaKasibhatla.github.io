@@ -1,10 +1,12 @@
 body{
-  background-image: url('../public/assets/bg/2.png');
-  background-repeat: no-repeat;
+  
+  background-repeat: repeat-y;
   background-size: cover;
   font-weight: bolder;
   -webkit-transition: background-image 0.2s ease-out;
   transition: background-image  0.2s ease-out;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 
@@ -22,6 +24,7 @@ body{
   left:0;
   bottom: 0;
   margin: auto;
+  height: 500px;
 }
 .Quote{
   background-color: black;
@@ -35,9 +38,12 @@ body{
   text-justify: inter-word;
   font-size: x-large;
   font-weight: 1000;
-  font-family: 'Poppins', sans-serif;
+  
 }
-
+.Quote:hover,.By:hover{
+  filter: drop-shadow(3px 3px 3px rgb(255, 255, 255));
+  outline: 5px solid whitesmoke;
+}
 .By{
   position: relative;
   background-color: black;
@@ -79,4 +85,231 @@ body{
 .next:hover,.prev:hover{
   cursor: pointer;
   filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
+
+.navbar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  top:0;
+  right:50px;
+  height: min-content;
+  color: white;
+  z-index: 1;
+}
+
+.navbar > a > button{
+  background-color: black;
+  opacity: 65%;
+  filter: alpha(opacity=90);
+  width: 150px;
+  height: 60px;
+  margin : 20px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  color: white;
+  transition: 0.2s all;
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  padding: 2px;
+}
+
+.navbar>a>button:hover{
+  background-color: whitesmoke;
+  opacity: 65%;
+  filter: alpha(opacity=90);
+  cursor: pointer;
+  color: black;
+  filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+  
+}
+
+.navbar>a>button:focus,.navbar>a>button:active{
+  transform: scale(1.2);
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+}
+
+
+.home{
+  display: flex;
+  position: absolute;
+  left: 0;
+  top:0;
+  right: 0;
+  left:0;
+  bottom: 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  width: 400px;
+  color: black;
+}
+
+.wallpapers{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  position: absolute;
+  top:25%;
+  left: 0;
+  right:0;
+  bottom: 0;
+  margin: auto;
+  padding: 30px;
+  column-gap: 35px;
+  row-gap: 35px;
+  align-items: center;
+  justify-content: center;
+  -webkit-align-items: center;
+}
+
+.wallpaper {
+  position: relative;
+}
+
+.download{
+  position: absolute;
+  right:5px;
+  bottom:15px;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+}
+
+.download:hover{
+  transform: scale(1.5);
+  filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+}
+
+.heading{
+  text-align: center;
+  color: white;
+}
+
+.btslogo{
+  position: fixed;
+  width: 100px;
+  left:20px;
+  top:300px;
+  padding: 10px;
+  margin: 20px;
+  border-radius:5px;
+}
+
+.armylogo{
+  position: fixed;
+  width: 75px;
+  right:20px;
+  top:300px;
+  padding: 10px;
+  margin: 20px;
+  border-radius:5px;
+}
+
+.MusicContainer{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  position: absolute;
+  top:15%;
+  left: 10%;
+  right:0;
+  bottom: 0;
+  margin: auto;
+  column-gap: 35px;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: normal;
+  -webkit-align-items: center;
+}
+
+.cover{
+  position: relative;
+}
+
+.albumDialog {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+  -webkit-align-items: center;
+  position: fixed;
+  height: 500px;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1.5;
+  align-items: center;
+}
+.albumCover{
+  border: 2px solid black;
+}
+.albumDialog h2 {
+  margin-top: 0;
+}
+
+.albumDialog button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.albumDialog button:hover {
+  background-color: #0069d9;
+}
+
+.songs{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  position: relative;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+  column-gap: 20px;
+  -webkit-align-items: center;
+}
+
+.song{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0px;
+  row-gap: 2px;
+  column-gap: 20px;
+  align-items: flex-start;
+
+}
+
+.close{
+  position:absolute;
+  width:45px;
+  height:45px;
+  right:20px;
+  top:20px;
+  border: 0px;
+}
+
+.close:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.speaker{
+  position: fixed;
+  right:25px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
 }
